@@ -1,0 +1,12 @@
+li:nth-child(even){
+    color: blue;
+}
+/*Sélectionne les éléments enfants paires*/
+
+li:nth-child(even):hover{
+    color: black;
+}
+
+li:nth-child(odd):hover{
+    color: blue;
+}
