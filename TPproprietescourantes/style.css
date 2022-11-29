@@ -1,0 +1,36 @@
+h1{
+    color: red; 
+    text-align: center; 
+    font-weight: bolder;
+}
+
+h3{
+    color: blue;
+    font-weight: bold;
+}
+
+#article1, #article2{
+    background-color: gray
+}
+
+strong{
+    font-style: normal;
+    color: yellowgreen;
+}
+
+em{
+    font-style: normal;
+    text-decoration: underline;
+    font-size: large;
+    color: orange;
+}
+
+#article3{
+    background-color: pink;
+}
+
+#titre2{
+    color: green;
+    text-align: right;
+    text-decoration: underline;
+}
