@@ -54,3 +54,7 @@
     grid-column: 1;
     grid-row: 5;
 }
+
+li{
+    display: inline-block;
+}
