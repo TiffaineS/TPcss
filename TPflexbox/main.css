@@ -1,65 +1,49 @@
-#container{
+.container{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+.dice{
+  border-color: red;
+  background-color: lightgrey;
+  border-style: solid;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.point{
+  border-color: lightgray;
+  background-color: red;
+  border-style: solid;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  }
+.gauche{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.droite{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.milieu{
+  display: flex;
   flex-direction: column;
 }
-
-header{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-  order: 1;
+/*Dé 6*/
+.top{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-nav{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-}
-
-main{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-}
-
-section{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-}
-
-article{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-}
-
-footer{
-  border-color: red;
-  background-color: gray;
-  border-style: solid;
-  border-radius: 15px;
-  width: 100px;
-  height: 100px;
-}
-
-.item{
-  order: 1;
-  color: red;
+.bot{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
