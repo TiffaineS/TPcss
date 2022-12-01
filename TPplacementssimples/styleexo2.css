@@ -1,23 +1,39 @@
 #cadre{
     border: solid 1px gray;
     background-color: lightgrey;
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 400px;
     padding: 10px;
 }
 
-h1{
+h1, .button{
    text-align: center;
 }
 
-.pseudo{
-    display: flex;
-    align-items: center;
-    
+.margeleft{
+    margin-left: 30px;
+    margin-bottom: 25px;
+    margin-top: 5px;
 }
 
-.mdp{
-    display: flex;
-    align-items: center;
-    
+.marge1{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.marge2{
+    margin-left: 10px;
+}
+
+.button{
+    margin-top: 20px;
+}
+
+.margeint{
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px black;
+    border-radius: 0px;
+    border-style: outset;
 }

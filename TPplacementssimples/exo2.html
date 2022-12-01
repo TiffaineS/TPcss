@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,31 @@
     <link rel="stylesheet" href="styleexo2.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="cadre">
-    <h1>Connexion</h1>
+        <h1>Connexion</h1>
 
-    <form method="POST" action="monProgramme.php">
-        <div class="pseudo"><label for="pseudo">Pseudo:</label>
-        <input type="text" name="pseudo" placeholder="Mon pseudo" id="pseudo"></div>
-        <div class="mdp"><label for="mdp">Mot de passe:</label>
-        <input type="password" name="mdp" placeholder="Mon mot de passe" id="mdp"><br></div>
-        <div class="box"><input type="checkbox" id="checkbox" checked="checked"/><label for="checkbox">Se souvenir de moi</label><br></div>
-        <div class="bouton"><input type="submit" value="Connexion"><input type="submit" value="Retour"></div>
-    </form>
+        <form method="POST" action="monProgramme.php">
+
+            <label class="margeleft" for="pseudo">Pseudo:</label>
+            <input class="marge1" type="text" name="pseudo" placeholder="Mon pseudo" id="pseudo"><br>
+
+            <label class="margeleft" for="mdp">Mot de passe:</label>
+           <input class="marge1" type="password" name="mdp" placeholder="Mon mot de passe" id="mdp"><br>
+
+            <div class="margeleft">
+                <input type="checkbox" id="checkbox" checked="checked">
+                <label class="marge2" for="checkbox">Se souvenir de moi</label><br>
+            </div>
+
+            <div class="button">
+                <input class="margeint" type="submit" value="Connexion">
+                <input class="margeint" type="submit" value="Retour">
+            </div>
+
+        </form>
     </div>
 </body>
+
 </html>
