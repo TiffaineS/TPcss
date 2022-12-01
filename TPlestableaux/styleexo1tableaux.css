@@ -1,0 +1,41 @@
+.tableau1{
+   border-collapse: collapse;
+   border: thick double purple; 
+   text-align: center;
+}
+.titretab1{
+    color: purple;
+}
+#entete1{
+    background-color: lightblue;
+}
+.bord{
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/*Tableau 2*/
+.tableau2{
+    border-collapse: collapse;
+    border: dashed gray; 
+    text-align: center;
+}
+
+.titretab2{
+    color: brown;
+    text-shadow: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+
+#entete2{
+    background-image: linear-gradient(to right, orange, lightblue);
+}
+
+.bordtab2{
+    background-color: lightgoldenrodyellow;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
