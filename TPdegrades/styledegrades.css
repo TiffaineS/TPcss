@@ -28,3 +28,7 @@ p {
 #circulaire{
     background-image: repeating-radial-gradient( black, white 10px);
 }
+
+#circulaire:hover{
+    background-image: repeating-radial-gradient(white, black 10px);
+}
