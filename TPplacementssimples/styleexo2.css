@@ -1,0 +1,23 @@
+#cadre{
+    border: solid 1px gray;
+    background-color: lightgrey;
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+}
+
+h1{
+   text-align: center;
+}
+
+.pseudo{
+    display: flex;
+    align-items: center;
+    
+}
+
+.mdp{
+    display: flex;
+    align-items: center;
+    
+}
