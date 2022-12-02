@@ -1,27 +1,183 @@
+@media only screen and (min-width: 320px){
+    body{
+        background-image: radial-gradient(at top center, #CCDAE0, #EDF2F4);
+    }
+    
+    p{
+        font-size: 0.8em;
+    }
+    
+    #banniere{
+        height: 50px;
+        width: auto;
+        background: linear-gradient(50deg,rgba(173, 28, 28, 0.712),rgba(255, 0, 0, 0) 70.71%), linear-gradient(-50deg, rgba(99, 170, 228, 0.664), rgba(0, 255, 0, 0) 70.71%), linear-gradient(0deg, rgba(32, 32, 226, 0.705), rgba(0, 0, 255, 0) 70.71%);
+    }
+    
+    h1{
+        text-align: center;
+        text-shadow: 3px 3px 10px rgb(42, 42, 143);
+        font-size: 1em;
+    }
+    
+    h3{
+        font-size: 0.8em;
+        color: #2B2D42;
+        font-size: larger;
+        font-weight: bold;
+        text-decoration-color : #2B2D42;
+        text-decoration-line  : underline;
+        text-decoration-style : dotted;
+    }
+    
+    .article{
+        border: solid 0.5px black;
+    }
+    
+    img{
+        border: solid 0.5px #8D99AE ;
+        justify-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+        width: 200px; 
+        height: 300px;
+    }
+    
+    footer{
+        text-align: right;
+    }
+    
+    ul {
+        list-style-type: none;
+        font-size: 0.8em;
+        text-align: center;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    a:link{
+        color: #D90429;
+        font-size: 0.8em;
+    }
+    
+    a:visited{
+        color: gray;
+    }
+    
+    a:hover{
+        color: #2B2D42;
+    }
+    
+    .starsred{
+        color: red;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        background-image: radial-gradient(at top center, #CCDAE0, #EDF2F4);
+    }
+    
+    p{
+        font-size: 1.2em;
+    }
+    
+    #banniere{
+        height: 100px;
+        width: auto;
+        background: linear-gradient(50deg,rgba(173, 28, 28, 0.712),rgba(255, 0, 0, 0) 70.71%), linear-gradient(-50deg, rgba(99, 170, 228, 0.664), rgba(0, 255, 0, 0) 70.71%), linear-gradient(0deg, rgba(32, 32, 226, 0.705), rgba(0, 0, 255, 0) 70.71%);
+    }
+    
+    h1{
+        text-align: center;
+        text-shadow: 5px 5px 10px rgb(42, 42, 143);
+        font-size: 2em;
+    }
+    
+    h3{
+        font-size: 1em;
+        color: #2B2D42;
+        font-size: larger;
+        font-weight: bold;
+        text-decoration-color : #2B2D42;
+        text-decoration-line  : underline;
+        text-decoration-style : dotted;
+    }
+    
+    .article{
+        border: solid 1px black;
+    }
+    
+    img{
+        border: solid 2px #8D99AE ;
+        justify-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+        width: 300px; 
+        height: 400px;
+    }
+    
+    footer{
+        text-align: right;
+    }
+    
+    ul {
+        list-style-type: none;
+        font-size: 1.2em;
+        text-align: center;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: row;
+        gap: 200px;
+        justify-content: center;
+    }
+    
+    a:link{
+        color: #D90429;
+        font-size: 1.2em;
+    }
+    
+    a:visited{
+        color: gray;
+    }
+    
+    a:hover{
+        color: #2B2D42;
+    }
+    
+    .starsred{
+        color: red;
+    }
+}
+    
 @media only screen and (min-width: 1024px){
-
-
+       
 body{
     background-image: radial-gradient(at top center, #CCDAE0, #EDF2F4);
 }
 
 p{
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 #banniere{
-    height: 100px;
+    height: 200px;
     width: auto;
     background: linear-gradient(50deg,rgba(173, 28, 28, 0.712),rgba(255, 0, 0, 0) 70.71%), linear-gradient(-50deg, rgba(99, 170, 228, 0.664), rgba(0, 255, 0, 0) 70.71%), linear-gradient(0deg, rgba(32, 32, 226, 0.705), rgba(0, 0, 255, 0) 70.71%);
 }
 
 h1{
     text-align: center;
-    text-shadow: 5px 5px 10px rgb(42, 42, 143);
+    text-shadow: 10px 10px 10px rgb(42, 42, 143);
     font-size: 2em;
 }
 
 h3{
+    font-size: 1.5em;
     color: #2B2D42;
     font-size: larger;
     font-weight: bold;
@@ -31,7 +187,7 @@ h3{
 }
 
 .article{
-    border: solid 1px black;
+    border: solid 2px black;
 }
 
 img{
@@ -40,7 +196,8 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto; 
-       
+    width: 400px; 
+    height: 500px;
 }
 
 footer{
@@ -49,7 +206,7 @@ footer{
 
 ul {
     list-style-type: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: center;
     background-color: lightgray;
     display: flex;
@@ -60,7 +217,7 @@ ul {
 
 a:link{
     color: #D90429;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 a:visited{
