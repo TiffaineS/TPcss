@@ -3,37 +3,42 @@
     background-color: lightgrey;
     height: 250px;
     width: 400px;
-    padding: 10px;
 }
 
-h1, .button{
+h1{
    text-align: center;
 }
 
-.margeleft{
+.pseudo, .mdp{
     margin-left: 30px;
-    margin-bottom: 25px;
-    margin-top: 5px;
+    padding: 5px;
 }
 
-.marge1{
-    margin-left: 20px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.marge2{
-    margin-left: 10px;
+.coche{
+    margin-left: 25px;
+    padding: 5px;
 }
 
 .button{
+    text-align: center;
     margin-top: 20px;
+    padding: 5px;
 }
 
-.margeint{
-    margin-left: 5px;
-    margin-right: 5px;
+.bordure{
     border: 2px black;
     border-radius: 0px;
     border-style: outset;
 }
+
+span{
+    padding: 5px;
+}
+
+input:checked{
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="password"]{
+    margin-left: 20px;
+} 

@@ -15,20 +15,24 @@
 
         <form method="POST" action="monProgramme.php">
 
-            <label class="margeleft" for="pseudo">Pseudo:</label>
-            <input class="marge1" type="text" name="pseudo" placeholder="Mon pseudo" id="pseudo"><br>
+            <div class="pseudo">
+            <label for="pseudo">Pseudo:</label>
+            <input type="text" name="pseudo" placeholder="Mon pseudo" id="pseudo"><br>
+            </div>
 
-            <label class="margeleft" for="mdp">Mot de passe:</label>
-           <input class="marge1" type="password" name="mdp" placeholder="Mon mot de passe" id="mdp"><br>
+            <div class="mdp">
+            <label for="mdp">Mot de passe:</label>
+           <input type="password" name="mdp" placeholder="Mon mot de passe" id="mdp"><br>
+            </div>
 
-            <div class="margeleft">
+            <div class="coche">
                 <input type="checkbox" id="checkbox" checked="checked">
-                <label class="marge2" for="checkbox">Se souvenir de moi</label><br>
+                <label for="checkbox">Se souvenir de moi</label><br>
             </div>
 
             <div class="button">
-                <input class="margeint" type="submit" value="Connexion">
-                <input class="margeint" type="submit" value="Retour">
+                <span><input class="bordure" type="submit" value="Connexion"></span>
+                <span><input class="bordure" type="submit" value="Retour"></span>
             </div>
 
         </form>
