@@ -28,6 +28,7 @@ h3{
 .proprietes{
     color: #5555ce;
     font-weight: bold;
+    display: none;
 }
 
 @media screen and (max-width:640px){
@@ -35,7 +36,7 @@ h3{
         background-color: #5555ce;
         color: white;
     }
-    #regle1, #regle4, #regle5{
+    #regle1{
         display: block;
 }
 }
@@ -45,7 +46,7 @@ h3{
         background-color: #5555ce;
         color: white;
     }
-    .regle2, .regle6{
+    #regle2{
         display: block;
     }
 }
@@ -55,7 +56,7 @@ h3{
         background-color: #5555ce;
         color: white;
     }
-    .regle3, .regle6{
+    #regle3{
         display: block;
     
     }
@@ -66,7 +67,7 @@ h3{
         background-color: #5555ce;
         color: white;
     }
-    .regle4, .regle5{
+    #regle4{
         display: block;
     
     }
@@ -77,19 +78,18 @@ h3{
         background-color: #5555ce;
         color: white;
     }
-    .regle5{
+    #regle5{
         display: block;
     
     }
 }
-
 
 @media screen and (orientation:landscape){
     #option6{
         background-color: #5555ce;
         color: white;
     }
-     .regle6{
+    #regle6{
         display: block;
     
     }
