@@ -2,11 +2,15 @@ body{
     background-color: lightblue;
 }
 
+h1{
+    text-align: center;
+    color: brown;
+}
 
-video{
-    border: solid 2px lightcyan;
-    height: 400px;
+.banniere{
+    height: auto;
     width: auto;
+    background-color: aquamarine;
 }
 
 .videoyt{
@@ -19,12 +23,36 @@ video{
 img{
     height: 200px;
     width: 250px;
-    margin: 25px;
+    margin-left: 25px;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: auto;
+    width: auto;
+}
 
-.music{
-    display: flex;
-    flex-direction: column;
+video{
+    border: solid 2px lightcyan;
+    height: 400px;
+    width: auto;
+    margin: 10px 15px 10px 5px;
+}
+
+.video{
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    align-content: center;
+}
+
+#music{
+    display: grid;
+    align-content: center;
     justify-content: center;
+    border: dotted 5px coral;
+    border-radius: 10%;
 }
+
