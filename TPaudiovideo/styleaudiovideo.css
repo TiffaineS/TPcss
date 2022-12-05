@@ -1,0 +1,30 @@
+body{
+    background-color: lightblue;
+}
+
+
+video{
+    border: solid 2px lightcyan;
+    height: 400px;
+    width: auto;
+}
+
+.videoyt{
+    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    height: 200px;
+    width: 250px;
+    margin: 25px;
+}
+
+
+.music{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
