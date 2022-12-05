@@ -1,0 +1,359 @@
+body{
+    background-image: radial-gradient(at top center, #CCDAE0, #EDF2F4);
+}
+
+#banniere{
+    height: 100px;
+    width: auto;
+    background: linear-gradient(50deg,rgba(173, 28, 28, 0.712),rgba(255, 0, 0, 0) 70.71%), linear-gradient(-50deg, rgba(99, 170, 228, 0.664), rgba(0, 255, 0, 0) 70.71%), linear-gradient(0deg, rgba(32, 32, 226, 0.705), rgba(0, 0, 255, 0) 70.71%);
+}
+
+h1{
+    text-align: center;
+    text-shadow: 5px 5px 10px rgb(42, 42, 143);
+}
+
+
+/*****carrousel 3d automatique*****/
+*{box-sizing : border-box}
+
+img{max-width:100%}
+
+.contenu_carou_auto{
+    margin:2rem auto;
+    width:420px;
+    height:279px;
+    perspective:8000px;
+}
+		
+.caroussel-image{
+	animation:rotation 24s infinite alternate linear;	
+    transform-style:preserve-3d;
+    position:relative;	
+
+}
+
+.caroussel-image img{
+	position: absolute;
+    top:0;
+    left: 0;
+}
+	
+.caroussel-image img{
+    filter:drop-shadow(0 12px 5px hsla(0,0%,0%,.4));
+    width:400px;
+    height:266px;
+    left:10px;
+    outline:1px solid transparent;
+    backface-visibility:hidden;
+	}
+		
+.caroussel-image img:nth-child(1){
+    transform:translate3d(0,0,495px);
+}
+		
+.caroussel-image img:nth-child(2){
+    transform:rotateY(45deg) translateZ(495px);
+}
+		
+.caroussel-image img:nth-child(3){
+	transform:rotateY(90deg) translateZ(495px);
+}
+	
+.caroussel-image img:nth-child(4){
+	transform:rotateY(135deg) translateZ(495px);
+}
+	
+.caroussel-image img:nth-child(5){
+	transform:rotateY(180deg) translateZ(495px);
+}
+	
+.caroussel-image img:nth-child(6){
+	transform:rotateY(225deg) translateZ(495px);
+}
+	
+.caroussel-image img:nth-child(7){
+	transform:rotateY(270deg) translateZ(495px);
+}
+	
+.caroussel-image img:nth-child(8){
+	transform:rotateY(315deg) translateZ(495px);
+	}
+
+@keyframes rotation{
+from{transform:rotatey(0)}
+to{transform:rotatey(1turn)}}
+
+
+
+
+/*****carrousel avec navigation*****/
+
+
+*,*::before,*::after{box-sizing: border-box}
+
+ul {padding:0;margin:0}
+
+img{
+    max-width:100%;
+    display: block;
+    padding-left: 190px;
+}
+    
+input {display:none}/* input{position:absolute;left:-9999px} */
+
+label{cursor:pointer} /*on rend cliquable tous les labels*/  
+    
+.slideshow {
+	
+position:relative;
+max-width:600px;
+margin:2rem auto;
+border:10px solid hsla(0,0%,100%,.9);
+box-shadow:0 2px 6px hsla(0,0%,0%,.4)
+	
+	}
+      
+	
+.slideshow > ul {
+	
+position:relative;
+overflow:hidden
+	
+	}
+    
+.slideshow > ul > li{
+	
+display:flex;
+width:100%;
+height:100%;
+transform:translate3d(0,0,0);/*accelere l'animation / optionnel*/
+position:absolute;
+top:0;
+left:0;
+transition:transform 2s cubic-bezier(.4,1,.2,1)}
+
+    
+.slideshow > ul > li.img1{left:0%}
+.slideshow > ul > li.img2{left:100%}
+.slideshow > ul > li.img3{left:200%}
+.slideshow > ul > li.img4{left:300%}
+    
+    
+.slideshow > #slide_img1:checked ~ ul > li,
+.slideshow > #pause_img1:checked ~ ul > li{transform:translatex(0%)}
+    
+    
+.slideshow > #slide_img2:checked ~ ul > li,
+.slideshow > #pause_img2:checked ~ ul > li {transform: translatex(-100%)}
+    
+    
+.slideshow > #slide_img3:checked ~ ul > li,
+.slideshow > #pause_img3:checked ~ ul > li {transform: translatex(-200%)}
+    
+    
+.slideshow > #slide_img4:checked ~ ul > li,
+.slideshow > #pause_img4:checked ~ ul > li {transform: translatex(-300%)}
+
+/*******************animation slide********************/
+@keyframes slide {
+0%, 13%{transform:translatex(0)}
+25%, 38%{transform:translatex(-100%)}
+50%, 63%{transform:translatex(-200%)}
+75%, 88%{transform:translatex(-300%)}
+}  
+    
+/******************fleches**************************/
+    
+.slideshow > .precedent,
+.slideshow > .suivant{
+width:44px;
+height:44px;
+margin-top:-22px; 
+position:absolute;
+top:50%;
+z-index:1}
+	
+.slideshow > .precedent{left:1rem}
+.slideshow > .suivant{right:1rem;}
+
+.slideshow > .precedent > label,
+.slideshow > .suivant > label{
+	
+position:absolute;
+display:flex;
+align-items: center;
+justify-content: center;
+opacity:0;
+z-index:-1;
+width:inherit;
+height:inherit;
+border-radius:50%;
+background-color:hsl(0,0%,15%);
+	
+	}   
+        
+.slideshow > .precedent > label::after{content:''; transform: rotate(-135deg);}
+.slideshow > .suivant > label::after{content:'';  transform: rotate(45deg);}
+    
+.slideshow > .precedent > label::after,
+.slideshow > .suivant > label::after {
+
+height: 20px;
+width: 20px;
+border-width: 5px 5px 0 0;
+border-style: solid;
+border-color: #f2f2f2;
+
+	
+	}   
+    
+    
+.slideshow > .slide:checked ~ .precedent > label,
+.slideshow > .slide:checked ~ .suivant > label{opacity:0;z-index:-1}
+
+.slideshow > #slide_img1:checked ~ .precedent > label.img4,
+.slideshow > #pause_img1:checked ~ .precedent > label.img4,
+.slideshow > #slide_img1:checked ~ .suivant > label.img2,
+.slideshow > #pause_img1:checked ~ .suivant > label.img2, 
+.slideshow > #slide_img2:checked ~ .precedent > label.img1,
+.slideshow > #pause_img2:checked ~ .precedent > label.img1,
+.slideshow > #slide_img2:checked ~ .suivant > label.img3,
+.slideshow > #pause_img2:checked ~ .suivant > label.img3, 
+.slideshow > #slide_img3:checked ~ .precedent > label.img2,
+.slideshow > #pause_img3:checked ~ .precedent > label.img2,
+.slideshow > #slide_img3:checked ~ .suivant > label.img4,
+.slideshow > #pause_img3:checked ~ .suivant > label.img4, 
+.slideshow > #slide_img4:checked ~ .precedent > label.img3,
+.slideshow > #pause_img4:checked ~ .precedent > label.img3,
+.slideshow > #slide_img4:checked ~ .suivant > label.img1,
+.slideshow > #pause_img4:checked ~ .suivant > label.img1{opacity:1;z-index:1}
+
+
+
+.slideshow > #play_img1:checked ~ .precedent > label.img4,
+.slideshow > #play_img1:checked ~ .suivant > label.img2 {animation:anim_fleches 17.2s infinite -2s}
+    
+    
+.slideshow > #play_img1:checked ~ .precedent > label.img1,
+.slideshow > #play_img1:checked ~ .suivant > label.img3 {animation:anim_fleches 17.2s infinite 2.3s}
+    
+    
+.slideshow > #play_img1:checked ~ .precedent > label.img2,
+.slideshow > #play_img1:checked ~ .suivant > label.img4 {animation:anim_fleches 17.2s infinite 6.6s}
+    
+    
+.slideshow > #play_img1:checked ~ .precedent > label.img3,
+.slideshow > #play_img1:checked ~ .suivant > label.img1 {animation:anim_fleches 17.2s infinite 10.9s}
+
+
+/* stop */
+.slideshow > .slide:checked ~ .precedent > label,
+.slideshow > .slide:checked ~ .suivant > label,
+.slideshow > .pause:checked ~ .precedent > label,
+.slideshow > .pause:checked ~ .suivant > label{animation-play-state:paused}
+
+/*********************************animation fleches*************************************************/
+@keyframes anim_fleches {
+	
+0%,
+24.99%{
+	
+opacity:1;
+z-index:1
+	
+	}
+	
+25%,100%{ 
+opacity:0;
+z-index:-1
+	
+	}
+	
+	}
+
+ 
+
+/***************************navigation puces bas********************************/
+.slideshow > .puces {
+position:absolute;
+left:0;
+width:100%;
+z-index:1;
+font-size: 0;
+text-align:center;
+bottom:.3125rem;
+}
+    
+.slideshow > .puces > label{
+position:relative;
+display:inline-flex;
+margin:0 .625rem;
+padding:.5rem;
+border-radius:50%;
+background-color:hsla(0,0%,0%,.6)}
+
+/********************simulation lien actif sur les puces******************************/
+.slideshow > .puces > label > .actif_puces {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border-radius:50%;
+z-index:1;
+background-color:hsl(0,0%,100%);
+transition:.3s ease;
+transform:scale(0)}
+
+
+.slideshow > #slide_img1:checked ~ .puces > label.img1 > .actif_puces,
+.slideshow > #pause_img1:checked ~ .puces > label.img1 > .actif_puces,
+.slideshow > #slide_img2:checked ~ .puces > label.img2 > .actif_puces,
+.slideshow > #pause_img2:checked ~ .puces > label.img2 > .actif_puces,
+.slideshow > #slide_img3:checked ~ .puces > label.img3 > .actif_puces,
+.slideshow > #pause_img3:checked ~ .puces > label.img3 > .actif_puces,
+.slideshow > #slide_img4:checked ~ .puces > label.img4 > .actif_puces,
+.slideshow > #pause_img4:checked ~ .puces > label.img4 > .actif_puces{transform:scale(1)}
+
+
+
+/* bouton play -  puces */
+
+.slideshow > #play_img1:checked ~ .puces > label.img1 > .actif_puces{animation:anim_puces 17.2s infinite -2s}
+    
+.slideshow > #play_img1:checked ~ .puces > label.img2 > .actif_puces{animation:anim_puces 17.2s infinite 2.3s}
+    
+.slideshow > #play_img1:checked ~ .puces > label.img3 > .actif_puces{animation:anim_puces 17.2s infinite 6.6s}
+    
+.slideshow > #play_img1:checked ~ .puces > label.img4 > .actif_puces{animation:anim_puces 17.2s infinite 10.9s}
+
+
+@keyframes anim_puces{
+	
+0%,
+24.99%{
+	
+transform:scale(1);
+background-color:hsl(0,0%,100%)
+
+}
+	
+25%,
+100%{
+transform:scale(0);
+background-color:unset
+	
+}
+	
+}
+
+.slideshow > #play_img1:checked ~ .puces > label > .actif_puces,
+.slideshow > .pause:checked ~ .puces > label > .actif_puces{transition:none}
+    
+ /* stop */
+
+.slideshow > .slide:checked ~ .puces > label > .actif_puces,
+.slideshow > .pause:checked ~ .puces > label > .actif_puces{animation-play-state:paused}   
+/********************************navigation puces bas****************************/
+
